@@ -3,67 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Discord Bot Dashboard</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #121212;
+      background-color: #1e1e1e;
       color: #fff;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
     .container {
-      width: 300px;
+      width: 800px;
+      margin: 0 auto;
       padding: 20px;
-      background-color: #1f1f1f;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
     }
 
     h1 {
-      margin-bottom: 20px;
-      color: #ffc107;
-      font-size: 24px;
+      color: #7289da;
     }
 
-    #number-display {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #ccc;
+    .section {
+      margin-bottom: 30px;
     }
 
-    #numbers {
+    .section-header {
       font-size: 20px;
-      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      background-color: #36393f;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .info p {
+      margin: 0;
+    }
+
+    .activity {
+      background-color: #2f3136;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .activity p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the Dashboard!</h1>
-    <p>Here are your random numbers and letters:</p>
-    <p id="numbers"></p>
+    <h1>Discord Bot Dashboard</h1>
+
+    <div class="section">
+      <div class="section-header">Server Information</div>
+      <div class="info">
+        <p>Server Name: My Discord Server</p>
+        <p>Owner: John Doe</p>
+        <p>Member Count: 100</p>
+        <p>Online Members: 30</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Recent Activity</div>
+      <div class="activity">
+        <p>User1 joined the server</p>
+        <p>User2 left the server</p>
+        <p>User3 sent a message in #general</p>
+        <p>User4 started streaming</p>
+      </div>
+    </div>
   </div>
-
-  <script>
-    function generateRandom() {
-      const numbersAndLetters = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      let randomString = '';
-      for (let i = 0; i < 10; i++) {
-        const randomIndex = Math.floor(Math.random() * numbersAndLetters.length);
-        randomString += numbersAndLetters[randomIndex];
-      }
-      document.getElementById('numbers').textContent = randomString;
-    }
-
-    // Call the generateRandom function when the page loads
-    generateRandom();
-  </script>
 </body>
 </html>
