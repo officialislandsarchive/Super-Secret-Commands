@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #303030;
+  background-color: #2a2a2a;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -13,14 +13,16 @@ body {
 .container {
   width: 300px;
   padding: 20px;
-  background-color: #424242;
+  background-color: #444;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
 h1 {
   margin-bottom: 20px;
+  color: #ffc107;
+  font-size: 24px;
 }
 
 #number-display {
@@ -37,12 +39,12 @@ h1 {
 }
 
 .number-btn {
-  padding: 15px 20px;
+  padding: 20px;
   font-size: 20px;
   background-color: #555;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -54,6 +56,11 @@ h1 {
   grid-column: 2;
 }
 
-#clear-btn, #submit-btn {
-  grid-column: span 3;
+.special-btn {
+  transition: all 0.3s ease;
+}
+
+.special-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
