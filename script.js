@@ -18,11 +18,14 @@ function updateDisplay() {
 }
 
 function checkPassword() {
-  if (userInput.length === passwordSequence.length) {
-    const userInputString = userInput.join('');
-    if (userInputString === passwordSequence.join('')) {
-      alert('Correct password! Redirecting...');
-      window.location.href = 'dashboard.html'; // Redirect to the dashboard page
+  const userInputString = userInput.join('');
+  if (userInputString.length <= passwordSequence.length) {
+    const partialSequence = passwordSequence.slice(0, userInput.length);
+    if (userInputString === partialSequence.join('')) {
+      if (userInputString === passwordSequence.join('')) {
+        alert('Correct password! Redirecting...');
+        window.location.href = 'dashboard.html'; // Redirect to the dashboard page
+      }
     } else {
       userInput = [];
       updateDisplay();
