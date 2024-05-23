@@ -47,9 +47,8 @@
 <body>
   <div class="container">
     <h1>Welcome to the Dashboard!</h1>
-    <p>Here are some random numbers and letters for you:</p>
+    <p>Here are your random numbers and letters:</p>
     <p id="numbers"></p>
-    <button onclick="generateRandom()">Generate New</button>
   </div>
 
   <script>
@@ -62,7 +61,9 @@
       }
       document.getElementById('numbers').textContent = randomString;
     }
-    generateRandom(); // Generate random numbers and letters on page load
+
+    // Call the generateRandom function when the page loads
+    generateRandom();
   </script>
 </body>
 </html>
