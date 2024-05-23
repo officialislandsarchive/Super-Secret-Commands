@@ -1,5 +1,5 @@
-const password = '5';
-let userInput = '';
+const password = '12345';
+let userInput = '123';
 
 const numberDisplay = document.getElementById('number-display');
 const numberButtons = document.querySelectorAll('.number-btn');
