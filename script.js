@@ -1,4 +1,4 @@
-const password = '12345';
+const password = '5';
 let userInput = '';
 
 const numberDisplay = document.getElementById('number-display');
