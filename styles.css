@@ -50,6 +50,10 @@ h1 {
   background-color: #777;
 }
 
+.zero-btn {
+  grid-column: 2;
+}
+
 #clear-btn, #submit-btn {
   grid-column: span 3;
 }
