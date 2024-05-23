@@ -4,10 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 300px;
+      padding: 20px;
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #ffc107;
+      font-size: 24px;
+    }
+
+    #number-display {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    #numbers {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the Dashboard!</h1>
-  <p>Here are some numbers and letters you can copy:</p>
-  <p>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+  <div class="container">
+    <h1>Welcome to the Dashboard!</h1>
+    <p>Here are some random numbers and letters for you:</p>
+    <p id="numbers"></p>
+    <button onclick="generateRandom()">Generate New</button>
+  </div>
+
+  <script>
+    function generateRandom() {
+      const numbersAndLetters = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      let randomString = '';
+      for (let i = 0; i < 10; i++) {
+        const randomIndex = Math.floor(Math.random() * numbersAndLetters.length);
+        randomString += numbersAndLetters[randomIndex];
+      }
+      document.getElementById('numbers').textContent = randomString;
+    }
+    generateRandom(); // Generate random numbers and letters on page load
+  </script>
 </body>
 </html>
