@@ -17,6 +17,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+#number-display {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
 #number-pad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -38,6 +43,6 @@ h1 {
   background-color: #0056b3;
 }
 
-#submit-btn {
+#clear-btn, #submit-btn {
   grid-column: span 3;
 }
